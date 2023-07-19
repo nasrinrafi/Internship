@@ -2,31 +2,37 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome import webdriver
 from behave import given, when, then
 from time import sleep
+from selenium import webdriver
 
 
 SEARCH_INPUT = (By.NAME, 'q')
 Add_card =(By.NAME,'ADD')
+Search_BTN=(By.CSS_SELECTOR,'button[type="submit"]')
 
 
-@given('Open cure skin website')
-def open_web (context):
-    context.driver = webdriver.Chrome(executable_path='./chromedriver')
+@given('Open Cure website')
+def open_web(context):
+   # context.driver = webdriver.Chrome(executable_path='./chromedriver')
+    context.browser = webdriver.Firefox(executable_path="geckodriver 2")
     context.driver.maximize_window()
-    context.driver.get('https://shop.cureskin.com/')
+   # context.driver.get("https://shop.cureskin.com")
 
+    context.app.main_page.open_page()
 
 @when('Input cure in the  search field')
 def input_search(context):
-    search = context.driver.find_element(*SEARCH_INPUT)
-    search.clear()
-    search.send_keys('cure')
-    sleep(4)
+    # search = context.driver.find_element(*SEARCH_INPUT)
+   # search.clear()
+   # search.send_keys('cure Skin gel')
+  #  sleep(4)
+    context.app.Header_page.input_search()
 
 
-@when('Click on search icon')
+@then('Click on search icon')
 def click_search_icon(context):
-    context.driver.find_element_by_css_selector('button[type="submit"]').click()
-    sleep(1)
+   #  context.driver.find_element_by_css_selector(*Search_BTN).click()
+   # sleep(1)
+   context.app.Header_page.click_search()
 
 
 @then('click on product')

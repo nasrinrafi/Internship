@@ -19,8 +19,8 @@ def browser_init(context):
     # context.browser = webdriver.Safari()
     context.browser = webdriver.Firefox(executable_path="geckodriver 2")
     context.driver = webdriver.firefox(service=service)
-   # Options.add_argument("--Headless")
-   # context.driver = webdriver.firefox(firefoxOption=Options, service=service)
+    Options.add_argument("--Headless")
+    context.driver = webdriver.firefox(firefoxOption=Options, service=service)
 
     context.driver.wait = WebDriverWait(context.driver, 10)
     context.driver.maximize_window()

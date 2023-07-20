@@ -1,7 +1,6 @@
 
 class Pages:
 
-
 def click(self, *locator):
     self.driver.find_element(*locator).click()
 

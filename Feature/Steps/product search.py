@@ -32,7 +32,7 @@ def input_search(context):
 def click_search_icon(context):
    #  context.driver.find_element_by_css_selector(*Search_BTN).click()
    # sleep(1)
-   context.app.Header_page.click_search()
+    context.app.Header_page.click_search()
 
 
 @then('click on product')

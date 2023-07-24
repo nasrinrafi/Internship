@@ -4,11 +4,10 @@ from Page.main_page import MainPage
 
 
 class Application:
-
-    def __int__(self,driver):
+    def _init_(self, driver):
         self.driver = driver
-        self.main_page=MainPage
-        self.Header= Header
+        self.main_page = MainPage
+        self.Header = Header
 
 
 

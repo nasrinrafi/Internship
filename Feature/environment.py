@@ -11,7 +11,7 @@ from App.application import Application
 #Options = firefoxOption()
 
 
-def browser_init(context):
+def browser_init(context,test_name):
     """
     :param context: Behave context
     """
@@ -19,15 +19,25 @@ def browser_init(context):
     # context.browser = webdriver.Safari()
     context.browser = webdriver.Firefox(executable_path="geckodriver 2")
     context.driver = webdriver.firefox(service=service)
-    Options.add_argument("--Headless")
-    context.driver = webdriver.firefox(firefoxOption=Options, service=service)
+    #Options.add_argument("--Headless")
+    #context.driver = webdriver.firefox(firefoxOption=Options, service=service)
 
     context.driver.wait = WebDriverWait(context.driver, 10)
     context.driver.maximize_window()
     context.driver.implicitly_wait(4)
-    context.app = Application(driver=context.driver)
+   # context.app = Application(driver=context.driver)
 
-
+    desired_cap = {
+         'browser': 'firefox',
+         'browser_version': '91',
+         'os': 'Windows',
+         'os_version': '10',
+          'name':test_name
+    }
+    Bs_user = 'nasrin11'
+    Bs_key = 'ysFMjRqHpQSSoSrhMQfT'
+    url = f'http://{Bs_user}:{Bs_key}@hub-cloud.browserstack.com/wd/hub'
+    context.driver = webdriver.Remote(url, desired_capabilities=desired_cap)
 
 
 def before_scenario(context, scenario):

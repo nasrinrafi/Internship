@@ -10,8 +10,7 @@ class Application:
         self.Header = Header
 
 
-
-app =Application('driver')
-app.main_page.open_page()
-app.Header.click_search()
+#app =Application('driver')
+#app.main_page.open_page()
+#app.Header.click_search()
 

@@ -7,10 +7,7 @@
     <list default="true" id="8753e561-88a9-40c1-af76-ffe0de35f4bc" name="Changes" comment="search and verify">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/application.py" beforeDir="false" afterPath="$PROJECT_DIR$/App/application.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Feature/Steps/product search.py" beforeDir="false" afterPath="$PROJECT_DIR$/Feature/Steps/product search.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Feature/environment.py" beforeDir="false" afterPath="$PROJECT_DIR$/Feature/environment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Page/Base_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Page/Base_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Page/Header_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Page/Header_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/geckodriver.log" beforeDir="false" afterPath="$PROJECT_DIR$/geckodriver.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +42,8 @@
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)"
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -183,7 +181,7 @@
       <updated>1684277676934</updated>
       <workItem from="1684277679157" duration="19448000" />
       <workItem from="1689370460500" duration="1672000" />
-      <workItem from="1689372842148" duration="24930000" />
+      <workItem from="1689372842148" duration="29188000" />
     </task>
     <servers />
   </component>

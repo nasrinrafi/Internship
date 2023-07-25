@@ -60,3 +60,5 @@ def after_scenario(context, feature):
 
 
 
+#allure result test#
+#behave -f allure_behave.formatter:AllureFormatter -o test_results/ feature/Tests"

@@ -12,11 +12,6 @@ Search_BTN=(By.CSS_SELECTOR,'button[type="submit"]')
 
 @given('Open Cure website')
 def open_web(context):
-   # context.driver = webdriver.Chrome(executable_path='./chromedriver')
-    context.browser = webdriver.Firefox(executable_path="geckodriver 2")
-    context.driver.maximize_window()
-   # context.driver.get("https://shop.cureskin.com")
-
     context.app.main_page.open_page()
 
 @when('Input cure in the  search field')
@@ -24,8 +19,9 @@ def input_search(context):
     # search = context.driver.find_element(*SEARCH_INPUT)
    # search.clear()
    # search.send_keys('cure Skin gel')
-  #  sleep(4)
-    context.app.Header_page.input_search()
+    sleep(4)
+    context.app.header_page.click_search()
+    context.app.header_page.input_search()
 
 
 @then('Click on search icon')

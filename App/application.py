@@ -1,13 +1,13 @@
 
-from Page.Header_page import Header
-from Page.main_page import MainPage
+from pages.header_page import Header
+from pages.main_page import MainPage
 
 
 class Application:
-    def _init_(self, driver):
+    def __init__(self, driver):
         self.driver = driver
-        self.main_page = MainPage
-        self.Header = Header
+        self.main_page = MainPage(self.driver)
+        self.header_page = Header(self.driver)
 
 
 #app =Application('driver')

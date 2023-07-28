@@ -35,6 +35,7 @@ class Page:
         e = self.wait.until(EC.element_to_be_clickable(locator))
         e.click()
 
+
     def wait_for_element_disappear(self, *locator):
         self.wait.until(EC.invisibility_of_element(locator))
 
